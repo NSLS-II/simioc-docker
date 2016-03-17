@@ -3,9 +3,6 @@ FROM debian:jessie
 MAINTAINER NSLS-II <https://nsls-ii.github.io>
 
 USER root
-# NOTE: proxy settings required from bnl campus
-ENV http_proxy="http://192.168.1.130:3128"
-ENV https_proxy="http://192.168.1.130:3128"
 
 # Install the EPICS stack
 RUN apt-get -q update
