@@ -13,12 +13,12 @@ The pv names and descriptions are here:
 |sim:mtr5 | Motor Record 5 |
 |sim:mtr6 | Motor Record 6 |
 | ------- | -------        |
-|sim:dev1:curr | scaler sensor 1; linked to 'sim:mtr1'; peak value at 1.5 |
-|sim:dev2:curr | scaler sensor 2; linked to 'sim:mtr2'; peak value at 0.5 |
-|sim:dev3:curr | scaler sensor 3; linked to 'sim:mtr3'; peak value at -0.5 |
-|sim:dev4:curr | scaler sensor 4; linked to 'sim:mtr4'; peak value at -1.5 |
-|sim:dev5:curr | scaler sensor 5; linked to 'sim:mtr5'; peak value at -2.5 |
-|sim:dev6:curr | scaler sensor 6; linked to 'sim:mtr6'; peak value at -1.0 |
+|sim:dev1:curr | scalar sensor 1; linked to 'sim:mtr1'; peak value at 1.5 |
+|sim:dev2:curr | scalar sensor 2; linked to 'sim:mtr2'; peak value at 0.5 |
+|sim:dev3:curr | scalar sensor 3; linked to 'sim:mtr3'; peak value at -0.5 |
+|sim:dev4:curr | scalar sensor 4; linked to 'sim:mtr4'; peak value at -1.5 |
+|sim:dev5:curr | scalar sensor 5; linked to 'sim:mtr5'; peak value at -2.5 |
+|sim:dev6:curr | scalar sensor 6; linked to 'sim:mtr6'; peak value at -1.0 |
 | ------- | -------        |
 |sim:det: | areaDetector pv prefix; available plugins include 'image1:', 'cam1:', 'Stats1-5', etc|
 | ------- | -------        |
