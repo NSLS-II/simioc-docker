@@ -26,7 +26,7 @@ RUN git clone https://github.com/pyepics/testioc /epics/iocs/pyepics_testioc
 RUN cd /epics/iocs/simioc && make -s all
 
 # Load the pyepics testioc database file just before iocInit
-RUN sed '/^iocInit/ i dbLoadRecords("/epics/iocs/pyepics_testioc/testiocApp/Db/pydebug.db", "P=Py:")' /epics/iocs/simioc/iocBoot/ioclocalhost/st.cmd
+RUN sed -i '/^iocInit/ i dbLoadRecords("/epics/iocs/pyepics_testioc/testiocApp/Db/pydebug.db", "P=Py:")' /epics/iocs/simioc/iocBoot/ioclocalhost/st.cmd
 
 RUN apt-get install -yq python3 python3-pip python3-numpy
 # dependency dragged in from (at least) ophyd.commands
