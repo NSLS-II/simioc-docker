@@ -21,8 +21,16 @@ RUN mkdir /epics/src
 RUN git clone https://github.com/dchabot/areadetector-1-9-1.git /epics/src/areadetector-1-9-1
 RUN cd /epics/src/areadetector-1-9-1 && make -s all
 
-RUN git clone https://github.com/dchabot/simioc.git /epics/iocs/simioc
+RUN git clone https://github.com/dchabot/simioc /epics/iocs/simioc
+RUN git clone https://github.com/pyepics/testioc /epics/iocs/pyepics_testioc
 RUN cd /epics/iocs/simioc && make -s all
+
+# Load the pyepics testioc database file
+RUN sed '/iocInit/ i dbLoadRecords("/epics/iocs/pyepics_testioc/testiocApp/Db/pydebug.db", "P=Py:")' st.cmd
+
+RUN apt-get install -yq python3 python3-pip python3-numpy
+# dependency dragged in from (at least) ophyd.commands
+RUN pip3 install https://github.com/pyepics/pyepics/zipball/master#egg=pyepics
 
 EXPOSE 5064 5065/udp
 
